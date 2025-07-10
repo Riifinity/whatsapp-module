@@ -1,4 +1,3 @@
-
 // .protect.js
 try {
     const fs = require('fs');
@@ -7,21 +6,26 @@ try {
     // Cek apakah InfoRiifinity.js tersedia
     const infoFile = path.join(__dirname, 'InfoRiifinity.js');
     if (!fs.existsSync(infoFile)) {
-        throw new Error("🚫 File InfoRiifinity.js tidak ditemukan.");
+        throw new Error("ðŸš« File InfoRiifinity.js tidak ditemukan.");
     }
 
-    // Baca file utama (misalnya main.js atau index.js)
-    const mainScript = fs.readFileSync(path.join(process.cwd(), 'main.js'), 'utf-8'); // Ganti dengan index.js jika itu file utama
+    // Cek isi file utama index.js
+    const mainScriptPath = path.join(process.cwd(), 'main.js'); // Ganti sesuai nama utama kamu jika beda
+    if (!fs.existsSync(mainScriptPath)) {
+        throw new Error("ðŸš« File main.js tidak ditemukan di root project.");
+    }
 
-    // Cek apakah file utama memuat baris pemanggilan fungsi
-    if (!mainScript.includes('await infoRiifinity')) {
-        throw new Error("🚫 Auto Riifinity Telah Dihapus ( JANGAN HAPUS CREDIT !!!).");
+    const mainScript = fs.readFileSync(mainScriptPath, 'utf-8');
+
+    // Validasi pemanggilan fungsi dan require
+    if (!mainScript.includes('await infoRiifinity(sock)')) {
+        throw new Error("ðŸš« Creadit Riifinity Telah Dihapus ( JANGAN HAPUS CREADIT !!).");
     }
 
     if (!mainScript.includes("require('./node_modules/riifinity/InfoRiifinity.js')")) {
-        throw new Error("🚫 Require Riifinity Telah Dihapus ( JANGAN HAPUS CREDIT !!! ).");
+        throw new Error("ðŸš« Creadit Riifinity Telah Dihapus ( JANGAN HAPUS CREADIT !!).");
     }
 
 } catch (err) {
-    throw new Error(`❌ Riifinity Security Error:\n${err.message}`);
+    throw new Error(`âŒ Riifinity Security Terdeteksi ( Terjadi Penghapusan Creadit !!!):\n${err.message}`);
 }

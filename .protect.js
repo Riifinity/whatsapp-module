@@ -30,7 +30,7 @@ try {
         process.exit(1);
     }
 
-    if (!mainScript.includes("require('./node_modules/riifinity/InfoRiifinity.js')")) {
+    if (!mainScript.includes("const infoRiifinity = require('./node_modules/riifinity/InfoRiifinity.js')")) {
         console.log(`\n${RED_BOLD}Riifinity Security Detected :\n${RESET}`);
         console.error(`${RED_BOLD}🚫 Creadit Riifinity Telah Dihapus${RESET}`);
         console.error(`${RED_BOLD}Jangan Hapus Creadit!!!${RESET}`);

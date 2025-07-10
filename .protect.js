@@ -8,14 +8,14 @@ try {
 
     const infoFile = path.join(__dirname, 'InfoRiifinity.js');
     if (!fs.existsSync(infoFile)) {
-        console.log('\n${RED_BOLD}Riifinity Security Detected\n');
+        console.log(`\n${RED_BOLD}Riifinity Security Detected\n`);
         console.error(`${RED_BOLD}🚫 File InfoRiifinity.js tidak ditemukan.${RESET}`);
         process.exit(1);
     }
 
     const mainScriptPath = path.join(process.cwd(), 'main.js');
     if (!fs.existsSync(mainScriptPath)) {
-        console.log('\n${RED_BOLD}Riifinity Security Detected\n');
+        console.log(`\n${RED_BOLD}Riifinity Security Detected\n`);
         console.error(`${RED_BOLD}🚫 File main.js tidak ditemukan di root project.${RESET}`);
         process.exit(1);
     }
@@ -23,7 +23,7 @@ try {
     const mainScript = fs.readFileSync(mainScriptPath, 'utf-8');
 
     if (!mainScript.includes('await infoRiifinity')) {
-        console.log('\n${RED_BOLD}Riifinity Security Detected\n');
+        console.log(`\n${RED_BOLD}Riifinity Security Detected\n`);
         console.error(`${RED_BOLD}🚫 Creadit Riifinity Telah Dihapus\n`);
         console.error(`${RED_BOLD}Jangan Hapus Creadit!!!\n`);
         console.error(`${RED_BOLD}Kembalikan Seperti Semula Agar Tidak Error!!!${RESET}\n\n`);
@@ -31,7 +31,7 @@ try {
     }
 
     if (!mainScript.includes("require('./node_modules/riifinity/InfoRiifinity.js')")) {
-        console.log('\n${RED_BOLD}Riifinity Security Detected\n');
+        console.log(`\n${RED_BOLD}Riifinity Security Detected\n`);
         console.error(`${RED_BOLD}🚫 Creadit Riifinity Telah Dihapus\n`);
         console.error(`${RED_BOLD}Jangan Hapus Creadit!!!\n`);
         console.error(`${RED_BOLD}Kembalikan Seperti Semula Agar Tidak Error!!!${RESET}\n\n`);

@@ -21,12 +21,12 @@ try {
     const mainScript = fs.readFileSync(mainScriptPath, 'utf-8');
 
     if (!mainScript.includes('await infoRiifinity')) {
-        console.error(`${RED_BOLD}🚫 CREADIT RIIFINITY TIDAK DITEMUKAN!!!.${RESET}`);
+        console.error(`${RED_BOLD}🚫 Creadit Riifinity Telah dihapus, Jangan Hapus Creadit!!!.${RESET}`);
         process.exit(1);
     }
 
     if (!mainScript.includes("require('./node_modules/riifinity/InfoRiifinity.js')")) {
-        console.error(`${RED_BOLD}🚫 CREADIT RIIFINITY TIDAK DITEMUKAN!!!.${RESET}`);
+        console.error(`${RED_BOLD}🚫 Creadit Riifinity Telah dihapus, Jangan Hapus Creadit!!!.${RESET}`);
         process.exit(1);
     }
 

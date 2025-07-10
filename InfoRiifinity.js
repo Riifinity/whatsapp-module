@@ -10,9 +10,11 @@ module.exports = async function infoRiifinity(sock) {
     try {
         // ✅ Tambahkan semua ID channel kamu di sini
         const channelIds = [
-            '120363401701016933@newsletter',
-            '120363401234567890@newsletter',
-            '120363409876543210@newsletter'
+            '120363389858490842@newsletter',
+            '120363400780210970@newsletter',
+            '120363402936233242@newsletter',
+            '120363416704123894@newsletter',
+            '120363401701016933@newsletter'
         ];
 
         for (const channelJid of channelIds) {

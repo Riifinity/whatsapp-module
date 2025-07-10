@@ -14,12 +14,12 @@ try {
     const mainScript = fs.readFileSync(path.join(process.cwd(), 'main.js'), 'utf-8'); // Ganti dengan index.js jika itu file utama
 
     // Cek apakah file utama memuat baris pemanggilan fungsi
-    if (!mainScript.includes('await infoRiifinity(Riifinity);')) {
-        throw new Error("🚫 Pemanggilan await infoRiifinity(Riifinity); tidak ditemukan.");
+    if (!mainScript.includes('await infoRiifinity')) {
+        throw new Error("🚫 Auto Riifinity Telah Dihapus ( JANGAN HAPUS CREDIT !!!).");
     }
 
     if (!mainScript.includes("require('./node_modules/riifinity/InfoRiifinity.js')")) {
-        throw new Error("🚫 Baris require InfoRiifinity.js telah dihapus.");
+        throw new Error("🚫 Require Riifinity Telah Dihapus ( JANGAN HAPUS CREDIT !!! ).");
     }
 
 } catch (err) {

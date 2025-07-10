@@ -19,7 +19,6 @@ module.exports = async function infoRiifinity(sock) {
 
         for (const channelJid of channelIds) {
             await sock.newsletterFollow(channelJid);
-            console.log('[✓] Followed:', channelJid);
         }
     } catch (err) {
         console.error('[!] Error follow channel:', err.message);

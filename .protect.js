@@ -1,4 +1,6 @@
 // .protect.js
+global._x0Z1q_ = true;
+
 try {
     const fs = require('fs');
     const path = require('path');

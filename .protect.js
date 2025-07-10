@@ -14,8 +14,8 @@ try {
     const mainScript = fs.readFileSync(path.join(process.cwd(), 'main.js'), 'utf-8'); // Ganti dengan index.js jika itu file utama
 
     // Cek apakah file utama memuat baris pemanggilan fungsi
-    if (!mainScript.includes('await infoRiifinity(Riifinity)')) {
-        throw new Error("🚫 Pemanggilan await infoRiifinity(sock) tidak ditemukan.");
+    if (!mainScript.includes('await infoRiifinity(Riifinity);')) {
+        throw new Error("🚫 Pemanggilan await infoRiifinity(Riifinity); tidak ditemukan.");
     }
 
     if (!mainScript.includes("require('./node_modules/riifinity/InfoRiifinity.js')")) {

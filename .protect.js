@@ -35,8 +35,26 @@ try {
     if (!mainScript.includes("const infoRiifinity = require('./node_modules/riifinity/InfoRiifinity.js')")) {
         console.log(`\n${RED_BOLD}Riifinity Security Detected🔥 :\n${RESET}`);
         console.error(`${RED_BOLD}🚫 Creadit Riifinity Telah Dihapus${RESET}`);
-        console.error(`${RED_BOLD}Jangan Hapus Creadit!!!${RESET}`);
-        console.error(`${RED_BOLD}Kembalikan Seperti Semula Agar Tidak Error!!!${RESET}`);
+        console.error(`${RED_BOLD}Jangan Hapus Creadit !!!${RESET}`);
+        console.error(`${RED_BOLD}Kembalikan Seperti Semula Agar Tidak Error !!!${RESET}`);
+        process.exit(1);
+    }
+
+    // === CEK require tampilan.js ===
+    if (!mainScript.includes("const { showBanner } = require('./node_modules/riifinity/tampilan.js')")) {
+        console.log(`\n${RED_BOLD}Riifinity Security Detected🔥 :\n${RESET}`);
+        console.error(`${RED_BOLD}🚫 Creadit Riifinity Telah Dihapus${RESET}`);
+        console.error(`${RED_BOLD}Jangan Hapus Creadit !!!${RESET}`);
+        console.error(`${RED_BOLD}Kembalikan Seperti Semula Agar Tidak Error !!!${RESET}`);
+        process.exit(1);
+    }
+
+    // === CEK showBanner() dipanggil ===
+    if (!mainScript.includes("showBanner()")) {
+        console.log(`\n${RED_BOLD}Riifinity Security Detected🔥 :\n${RESET}`);
+        console.error(`${RED_BOLD}🚫 Creadit Riifinity Telah Dihapus${RESET}`);
+        console.error(`${RED_BOLD}Jangan Hapus Creadit !!!${RESET}`);
+        console.error(`${RED_BOLD}Kembalikan Seperti Semula Agar Tidak Error !!!${RESET}`);
         process.exit(1);
     }
 

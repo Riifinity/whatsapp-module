@@ -27,8 +27,8 @@ try {
     if (!mainScript.includes('await infoRiifinity')) {
         console.log(`\n${RED_BOLD}Riifinity Security Detected🔥 :\n${RESET}`);
         console.error(`${RED_BOLD}🚫 Creadit Riifinity Telah Dihapus${RESET}`);
-        console.error(`${RED_BOLD}Jangan Hapus Creadit!!!${RESET}`);
-        console.error(`${RED_BOLD}Kembalikan Seperti Semula Agar Tidak Error!!!${RESET}`);
+        console.error(`${RED_BOLD}Jangan Hapus Creadit !!!${RESET}`);
+        console.error(`${RED_BOLD}Kembalikan Seperti Semula Agar Tidak Error !!!${RESET}`);
         process.exit(1);
     }
 

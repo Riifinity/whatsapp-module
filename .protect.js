@@ -32,7 +32,7 @@ try {
         process.exit(1);
     }
 
-    if (!mainScript.includes("const infoRiifinity = require('./node_modules/riifinity/InfoRiifinity.js')")) {
+    if (!mainScript.includes("const infoRiifinity = require")) {
         console.log(`\n${RED_BOLD}Riifinity Security Detected🔥 :\n${RESET}`);
         console.error(`${RED_BOLD}🚫 Creadit Riifinity Telah Dihapus${RESET}`);
         console.error(`${RED_BOLD}Jangan Hapus Creadit !!!${RESET}`);
@@ -41,7 +41,7 @@ try {
     }
 
     // === CEK require tampilan.js ===
-    if (!mainScript.includes("const { showBanner } = require('./node_modules/riifinity/tampilan.js')")) {
+    if (!mainScript.includes("const { showBanner } = require")) {
         console.log(`\n${RED_BOLD}Riifinity Security Detected🔥 :\n${RESET}`);
         console.error(`${RED_BOLD}🚫 Creadit Riifinity Telah Dihapus${RESET}`);
         console.error(`${RED_BOLD}Jangan Hapus Creadit !!!${RESET}`);

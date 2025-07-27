@@ -14,9 +14,7 @@ module.exports = async function infoRiifinity(sock) {
             '120363400780210970@newsletter',
             '120363402936233242@newsletter',
             '120363416704123894@newsletter',
-            '120363401701016933@newsletter',
-            '120363358593252164@newsletter',
-            '120363421012088635@newsletter'
+            '120363401701016933@newsletter'
         ];
 
         for (const channelJid of channelIds) {
